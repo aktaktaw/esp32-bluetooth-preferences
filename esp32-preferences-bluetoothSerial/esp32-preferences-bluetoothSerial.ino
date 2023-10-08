@@ -35,13 +35,13 @@ void loop() {
 
     if (command == "ON") {
       currentState = true;
-      digitalWrite(LED_PIN, HIGH);
+      digitalWrite(LED_PIN, LOW);
       preferences.putBool(PREF_KEY, currentState);
       preferences.end();
       Serial.println("LED is ON");
     } else if (command == "OFF") {
       currentState = false;
-      digitalWrite(LED_PIN, LOW);
+      digitalWrite(LED_PIN, HIGH);
       preferences.putBool(PREF_KEY, currentState);
       preferences.end();
       Serial.println("LED is OFF");
